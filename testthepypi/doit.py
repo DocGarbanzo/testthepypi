@@ -1,7 +1,12 @@
+import sys
 
-def lets_go(s='hallo pypi'):
-    print(s)
+
+def lets_go(s='pypi'):
+    print(f'Hallo {s}')
 
 
 def main():
-    lets_go()
+    if len(sys.argv) > 1:
+        lets_go(sys.argv[1])
+    else:
+        lets_go()
